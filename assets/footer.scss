@@ -1,0 +1,20 @@
+.app-footer{
+    background:#76a03a !important;
+    display: flex;
+    .title{
+        .text-wrap{
+            padding: 50px;
+        }
+        width: 100%;
+        display: inline-block;
+        p{
+            font-size: 1.5rem !important;
+            font-weight: 400;
+            line-height: 2rem;
+            letter-spacing: normal !important;
+            font-family: "Roboto", sans-serif !important;
+            text-align: right;
+            color: white;
+        }
+    }
+}  

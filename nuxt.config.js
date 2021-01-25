@@ -37,8 +37,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/auth',
   ],
-
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': { 
+      target: process.env.API_URL, 
+      pathRewrite: {'^/api/': '/api/'}, 
+      changeOrigin: true 
+    }
+  },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -58,7 +70,28 @@ export default {
       }
     }
   },
-
+  auth: {
+    redirect: {
+      register:'/client/register',
+      login: '/client/login',
+      logout: '/',
+      home: '/'
+    },
+      strategies: {
+        local: {
+          endpoints: {
+            login: { url: '/api/login', method: 'post', propertyName: 'meta.token' },
+            user: { url: '/api/user', method: 'get', propertyName:  'data' },
+            logout: { url: '/api/logout', method: 'post' },
+           
+          }
+        },
+      }
+  },
+  //dùng cái này để sử dụng middleware xác thực người dùng cho mọi route, tương tự middleware trong Laravel
+  router: {
+    
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

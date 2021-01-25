@@ -1,0 +1,24 @@
+.login-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .form-login{
+        width: 30%;
+        border-radius: 2%;
+        padding: 20px;
+        margin: 25%;
+        background-color: white;
+        .btn-submit{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            span{
+                color: white;
+            }
+        }
+        .color-text{
+            color: white;
+        }
+    }
+}

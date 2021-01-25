@@ -1,7 +1,7 @@
 <template>
       <v-footer class="app-footer">
       <div class="title">
-        <div>
+        <div class="text-wrap">
           <p>
             Truyền hình trực tiếp chất lượng full HD
            </p>
@@ -13,3 +13,7 @@
       </div>
     </v-footer>
 </template>
+
+<style lang="scss">
+@import '~/assets/footer.scss';
+</style>
