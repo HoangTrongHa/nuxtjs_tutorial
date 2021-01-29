@@ -16,6 +16,7 @@
     }
     .log-ined{
         .dropdown {
+            padding: 40px;
             position: relative;
             display: inline-block;
             .dropdown-content {
@@ -31,6 +32,11 @@
                 .dropdown-content {
                     display: block;
                 }
+            }
+            a{
+                display: block;
+                padding: 15px;
+                color: #212121;
             }
         }
     }

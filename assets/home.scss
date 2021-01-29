@@ -11,6 +11,15 @@
                 background-color:#7eb03d !important;
                 color: white;
             }
+            .wrap-button{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 80%;
+                .link-home{
+                    text-decoration: none;
+                }
+            }
         }
     }
     

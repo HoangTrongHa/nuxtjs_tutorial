@@ -80,7 +80,8 @@ export default {
     },
     methods: {
         async registerUser() {
-            let res = await this.$axios.post('api/register', this.user).then(response => {
+            let res = await this.$axios.post('api/register', this.user)
+            .then(response => {
                 this.$router.push('/client/login')
             })
         }

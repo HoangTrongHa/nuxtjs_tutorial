@@ -1,0 +1,13 @@
+.form-height{
+    height: 100px !important;
+    width: 30vw !important;
+    padding: 20px 20px;
+    .v-form{
+        display: flex;
+        width: 100%;
+        .form-commentt{
+            display: flex;
+            width: 100% !important;
+        }
+    }
+}
